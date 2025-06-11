@@ -4,8 +4,9 @@ project "GLFW"
 	staticruntime "off"
 	warnings "off"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targ = "%{wks.location}/bin/" .. outputdir .. "/Dependencies/%{prj.name}"
+	targetdir (targ)
+	objdir (targ .. "/obj")
 
 	files
 	{
